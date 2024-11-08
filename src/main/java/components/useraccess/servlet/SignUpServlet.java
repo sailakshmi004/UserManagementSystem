@@ -15,7 +15,7 @@ public class SignUpServlet extends HttpServlet {
             throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        String role = "Employee"; // Default role
+        String role = "Employee"; 
 
         try (Connection conn = DatabaseConnection.getConnection()) {
             String sql = "INSERT INTO users (username, password, role) VALUES (?, ?, ?)";
